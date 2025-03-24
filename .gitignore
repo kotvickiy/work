@@ -2,6 +2,7 @@
 /app/__pycache__/
 /win3132/
 /old/
-config.py/
-test.py/
-base.db/
+/config.py
+/test.py
+/base.db
+/out.log
