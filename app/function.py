@@ -148,15 +148,15 @@ def all_date():
 
 def km_rub(km):
     if km < 500:
-        return round(km * 14.79, 2)
+        return round(km * 15.66, 3)
     elif 500 <= km < 1000:
-        return round(km * 12.18, 2)
+        return round(km * 12.615, 3)
     elif 1000 <= km < 1500:
-        return round(km * 10.44, 2)
+        return round(km * 10.875, 3)
     elif 1500 <= km < 2000:
-        return round(km * 9.57, 2)
+        return round(km * 10.005, 3)
     elif km >= 2000:
-        return round(km * 8.7, 2)
+        return round(km * 8.961, 3)
 
 
 def luw_rub(luw):
@@ -439,7 +439,7 @@ def moneys(mounth, year):
     res = 0
     for i in range(len(number_trips_mounth(mounth, year))):
         res += km_rub(number_trips_mounth(mounth, year)[i][1])
-    res += luw_rub(luw_mounth(mounth, year))
+    # res += luw_rub(luw_mounth(mounth, year))
     res += plain_rub(plain(mounth, year))
     res += repair_rub(repair(mounth, year))
     return round(res, 2)
